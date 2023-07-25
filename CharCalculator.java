@@ -6,14 +6,18 @@ import java.util.Map;
 public class CharCalculator {
     public String countUniqueChars(String inputString) {
         Map<Character, Integer> charCountMap = new HashMap<>();
-        for (char c : inputString.toCharArray()) {
-            charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+        for (char character : inputString.toCharArray()) {
+            charCountMap.put(character, charCountMap.getOrDefault(character, 0) + 1);
         }
 
         StringBuilder resultBuilder = new StringBuilder();
-        for (char c : charCountMap.keySet()) {
-            int count = charCountMap.get(c);
-            resultBuilder.append("'").append(c).append("' - ").append(count).append("\n");
+        for (char character : charCountMap.keySet()) {
+            int count = charCountMap.get(character);
+            resultBuilder.append("'")
+                         .append(character)
+                         .append("' - ")
+                         .append(count)
+                         .append("\n");
         }
 
         return resultBuilder.toString();
