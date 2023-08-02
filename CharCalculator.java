@@ -5,6 +5,10 @@ import java.util.Map;
 
 public class CharCalculator {
     public String countUniqueChars(String inputString) {
+        if (inputString == null) {
+            return "";
+        }
+
         Map<Character, Integer> charCountMap = new HashMap<>();
         for (char character : inputString.toCharArray()) {
             charCountMap.put(character, charCountMap.getOrDefault(character, 0) + 1);
