@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class CharCounter {
-    private final int CACHE_SIZE = 100; // You can adjust the cache size as needed
+    private final int CACHE_SIZE = 100;
     private LinkedHashMap<String, String> cache;
 
     public CharCounter() {
